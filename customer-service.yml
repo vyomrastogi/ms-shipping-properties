@@ -6,7 +6,6 @@ eureka:
      defaultZone: ${EUREKA_URL}/eureka/
   instance:
     securePortEnabled: true 
-    securePort: ${PORT:8080}
     hostname: ${DOMAIN:localhost}
     homePageUrl: https://${eureka.instance.hostname}/
 spring:
