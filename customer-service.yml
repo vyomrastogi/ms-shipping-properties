@@ -9,3 +9,6 @@ eureka:
     securePort: ${PORT:8080}
     hostname: ${DOMAIN:localhost}
     homePageUrl: https://${eureka.instance.hostname}/
+spring:
+  rabbitmq:
+    addresses: ${RABBITMQ_BIGWIG_RX_URL}
