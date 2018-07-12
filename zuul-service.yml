@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: zuul-server
+  sleuth: 
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: ${ZIPKIN_URL}
+server:
+  port: ${PORT:9090}
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl: 
+     defaultZone: ${EUREKA_URL}/eureka/
+  instance:
+    securePortEnabled: true 
+    securePort: ${PORT:8080}
+    hostname: ${DOMAIN:localhost}
+    homePageUrl: https://${eureka.instance.hostname}/
+zuul: 
+ host: 
+  connectTimeoutMillis: 20000
+  socketTimeoutMillis: 20000
+ routes: 
+  customer-service: 
+   path: /api/customer-service/**
+   serviceId: customer-service
+  item-service: 
+   path: /item/item-service/**
+   serviceId: item-service
+  sales-order-service: 
+   path: /api/sales-order-service/**
+   serviceId: sales-order-service
+
+ribbon:
+ ReadTimeout: 10000
+ ConnectTimeout: 10000
+hystrix:
+  command: 
+    default:
+      execution: 
+        isolation:
+          thread:
+            timeoutInMilliseconds: 100000
