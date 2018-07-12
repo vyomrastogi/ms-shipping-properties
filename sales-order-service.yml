@@ -12,6 +12,3 @@ eureka:
 spring:
   rabbitmq:
     addresses: ${RABBITMQ_BIGWIG_RX_URL}
-ribbon: 
- eureka: 
-  enabled: true
