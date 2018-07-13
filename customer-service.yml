@@ -16,3 +16,8 @@ spring:
 ribbon: 
  eureka: 
   enabled: true
+
+demoConfig: 
+ emailId: from.env@config.com
+ firstName: config
+ lastName: refresh
