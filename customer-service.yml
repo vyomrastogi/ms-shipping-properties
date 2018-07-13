@@ -24,6 +24,6 @@ ribbon:
   enabled: true
 
 demo-configs: 
- emailId: from.noenv@config.com
+ emailId: from.noenv_today@config.com
  firstName: config
  lastName: refresh
