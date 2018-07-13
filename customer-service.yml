@@ -17,7 +17,7 @@ ribbon:
  eureka: 
   enabled: true
 
-demoConfig: 
+demoConfigs: 
  emailId: from.env@config.com
  firstName: config
  lastName: refresh
