@@ -29,12 +29,15 @@ zuul:
   customer-service: 
    path: /api/customer-service/**
    serviceId: customer-service
+   stripPrefix: false
   item-service: 
-   path: /item/item-service/**
+   path: /api/item-service/**
    serviceId: item-service
+   stripPrefix: false
   sales-order-service: 
    path: /api/sales-order-service/**
    serviceId: sales-order-service
+   stripPrefix: false
 
 ribbon:
  ReadTimeout: 10000
