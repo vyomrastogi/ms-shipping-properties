@@ -24,6 +24,6 @@ ribbon:
   enabled: true
 
 demo-configs: 
- emailId: from.worknow@config.com
+ emailId: from.config@config.com
  firstName: config
  lastName: refresh
