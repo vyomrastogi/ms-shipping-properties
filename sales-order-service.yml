@@ -12,7 +12,7 @@ eureka:
     homePageUrl: https://${eureka.instance.hostname}/
 spring:
   rabbitmq:
-    addresses: ${RABBITMQ_BIGWIG_RX_URL}
+    addresses: ${RABBITMQ_BIGWIG_URL}
   sleuth: 
     sampler:
       probability: 1.0
