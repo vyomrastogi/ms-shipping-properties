@@ -5,7 +5,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    baseUrl: ${ZIPKIN_URL}
+    baseUrl: https://ms-zipkin-server.herokuapp.com
   rabbitmq:
     addresses: ${RABBITMQ_BIGWIG_RX_URL}
 server:
