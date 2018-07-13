@@ -6,9 +6,19 @@ eureka:
      defaultZone: ${EUREKA_URL}/eureka/
   instance:
     securePortEnabled: true 
-    securePort: ${PORT:8080}
+    nonSecurePort: 80
+    securePort: 443
     hostname: ${DOMAIN:localhost}
     homePageUrl: https://${eureka.instance.hostname}/
 spring:
   rabbitmq:
     addresses: ${RABBITMQ_BIGWIG_RX_URL}
+  sleuth: 
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    baseUrl: ${ZIPKIN_URL}
+ribbon: 
+ eureka: 
+  enabled: true

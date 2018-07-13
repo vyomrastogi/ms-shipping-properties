@@ -13,6 +13,12 @@ eureka:
 spring:
   rabbitmq:
     addresses: ${RABBITMQ_BIGWIG_RX_URL}
+  sleuth: 
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    baseUrl: ${ZIPKIN_URL}
 ribbon: 
  eureka: 
   enabled: true
