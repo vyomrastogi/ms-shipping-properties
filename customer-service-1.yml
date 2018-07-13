@@ -1,0 +1,29 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl: 
+     defaultZone: ${EUREKA_URL}/eureka/
+  instance:
+    securePortEnabled: true 
+    nonSecurePort: 80
+    securePort: 443
+    hostname: ${DOMAIN:localhost}
+    homePageUrl: https://${eureka.instance.hostname}/
+spring:
+  rabbitmq:
+    addresses: ${RABBITMQ_BIGWIG_URL}
+  sleuth: 
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    baseUrl: ${ZIPKIN_URL}
+ribbon: 
+ eureka: 
+  enabled: true
+
+demo-configs: 
+ emailId: from.noenv@config.com
+ firstName: config
+ lastName: refresh
